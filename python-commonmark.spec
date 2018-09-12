@@ -11,7 +11,7 @@ Version:	0.7.5
 Release:	1
 License:	BSD
 Group:		Libraries/Python
-Source0:	https://files.pythonhosted.org/packages/77/16/44a297228a439484d049cdad818c7f6691c162b4cd741c619caeb208bb1e/CommonMark-%{version}.tar.gz
+Source0:	https://pypi.python.org/packages/source/c/commonmark/CommonMark-%{version}.tar.gz
 # Source0-md5:	70cb4ade4b9d0370213be9816f99a21e
 URL:		https://github.com/rtfd/CommonMark-py
 %if %{with python2}
