@@ -8,7 +8,7 @@ Summary:	Python parser for the CommonMark Markdown spec
 Summary(pl.UTF-8):	Pythonowy parser specyfikacji CommonMark Markdown
 Name:		python-commonmark
 Version:	0.8.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/c/commonmark/commonmark-%{version}.tar.gz
@@ -73,6 +73,7 @@ użyciu natywnych modułów.
 
 %if %{with tests}
 LC_ALL=C.UTF-8 \
+PYTHONIOENCODING=utf-8 \
 PYTHONPATH=$(pwd)/build-2/lib \
 %{__python} commonmark/tests/run_spec_tests.py
 %endif
@@ -84,7 +85,7 @@ PYTHONPATH=$(pwd)/build-2/lib \
 %if %{with tests}
 LC_ALL=C.UTF-8 \
 PYTHONPATH=$(pwd)/build-3/lib \
-%{__python} commonmark/tests/run_spec_tests.py
+%{__python3} commonmark/tests/run_spec_tests.py
 %endif
 %endif
 
