@@ -8,7 +8,7 @@ Summary:	Python parser for the CommonMark Markdown spec
 Summary(pl.UTF-8):	Pythonowy parser specyfikacji CommonMark Markdown
 Name:		python-commonmark
 Version:	0.8.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/c/commonmark/commonmark-%{version}.tar.gz
