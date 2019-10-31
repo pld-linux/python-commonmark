@@ -1,23 +1,12 @@
---- commonmark-0.8.1/setup.py.orig	2018-09-06 19:15:16.000000000 +0200
-+++ commonmark-0.8.1/setup.py	2018-10-06 08:34:46.490706284 +0200
-@@ -21,10 +21,8 @@
+--- commonmark-0.9.1/setup.py~	2019-10-04 17:35:41.000000000 +0200
++++ commonmark-0.9.1/setup.py	2019-10-31 12:16:50.113398626 +0100
+@@ -21,8 +21,7 @@ class Test(Command):
  
  
  tests_require = [
--    'flake8==3.5.0',
+-    'flake8==3.7.8',
 -    'hypothesis==3.55.3',
 +    'hypothesis>=3.55.3',
-     # For python 2.6
--    'hypothesislegacysupport',
  ]
  
  
-@@ -55,7 +53,7 @@
-     },
-     cmdclass={'test': Test},
-     install_requires=[
--        'future',
-+        # 'future', # python2 only
-     ],
-     tests_require=tests_require,
-     extras_require={'test': tests_require},
