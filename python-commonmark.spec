@@ -11,6 +11,7 @@ Version:	0.9.1
 Release:	1
 License:	BSD
 Group:		Libraries/Python
+#Source0Download: https://pypi.org/simple/commonmark/
 Source0:	https://files.pythonhosted.org/packages/source/c/commonmark/commonmark-%{version}.tar.gz
 # Source0-md5:	cd1dc70c4714d9ed4117a40490c25e00
 Patch0:		%{name}-deps.patch
@@ -19,7 +20,7 @@ URL:		https://github.com/rtfd/CommonMark-py
 BuildRequires:	python-modules >= 1:2.7
 BuildRequires:	python-setuptools
 %if %{with tests}
-BuildRequires:	python-future
+BuildRequires:	python-future >= 0.14.0
 BuildRequires:	python-hypothesis >= 3.55.3
 %endif
 %endif
@@ -114,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README.rst
+%doc CHANGELOG.md LICENSE README.rst spec.txt
 %attr(755,root,root) %{_bindir}/cmark-2
 %{py_sitescriptdir}/commonmark
 %{py_sitescriptdir}/commonmark-%{version}-py*.egg-info
@@ -123,7 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-commonmark
 %defattr(644,root,root,755)
-%doc LICENSE README.rst
+%doc CHANGELOG.md LICENSE README.rst spec.txt
 %attr(755,root,root) %{_bindir}/cmark
 %attr(755,root,root) %{_bindir}/cmark-3
 %{py3_sitescriptdir}/commonmark
